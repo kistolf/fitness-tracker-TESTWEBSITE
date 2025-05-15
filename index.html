@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiTEST | Workout Tracker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-container">
+    <header class="app-header">
+        <div class="header-content">
+            <h1><i class="fas fa-dumbbell"></i> FiTEST</h1>
+            <div class="current-date" id="current-date"></div>
+        </div>
+        <div class="user-stats">
+            <div class="stat-box">
+                <i class="fas fa-check-circle"></i>
+                <span id="total-workouts">0</span> workouts
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-fire"></i>
+                <span id="total-calories">0</span> kcal
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-clock"></i>
+                <span id="total-minutes">0</span> min
+            </div>
+        </div>
+    </header>
+
+    <main class="app-main">
+        <div class="workout-form">
+            <div class="form-group">
+                <input type="text" id="workout-name" placeholder="Workout name">
+                <i class="fas fa-running"></i>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="number" id="workout-calories" placeholder="Calories">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="form-group">
+                    <input type="number" id="workout-duration" placeholder="Minutes">
+                    <i class="fas fa-stopwatch"></i>
+                </div>
+            </div>
+            <button id="add-workout" class="add-btn">
+                <i class="fas fa-plus"></i> Add Workout
+            </button>
+        </div>
+
+        <div class="workout-list" id="workout-list">
+            <h2><i class="fas fa-list"></i> Today's Workouts</h2>
+            <div class="list-container" id="list-container"></div>
+        </div>
+
+        <div class="progress-section">
+            <h2><i class="fas fa-chart-line"></i> Weekly Progress</h2>
+            <div class="chart-container">
+                <div class="chart" id="calories-chart"></div>
+                <div class="chart" id="minutes-chart"></div>
+            </div>
+            <div class="chart-tabs">
+                <button class="tab-btn active" data-chart="calories">Calories</button>
+                <button class="tab-btn" data-chart="minutes">Minutes</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="notification" id="notification"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
